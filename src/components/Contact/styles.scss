@@ -1,0 +1,78 @@
+@import "../../styles/global.scss";
+
+// page container
+.contact_container {
+  height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 50px;
+  align-items: center;
+  @include mobile {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: start;
+  }
+}
+
+//right side
+.right_side {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 50%;
+  @include mobile {
+    align-items: center;
+    width: 100%;
+  }
+  
+}
+
+//title box
+.contact_title {
+  display: flex;
+  width: 300px;
+  height: 100px;
+  background: rgb(44, 46, 67);
+  background: linear-gradient(303deg, rgba(44, 46, 67, 1) 0%, rgba(230, 193, 39, 1) 13%, rgba(44, 46, 67, 1) 100%);
+  justify-content: center;
+  align-items: center;
+  color: $lightGreyColor ;
+  text-shadow: 2px 3px 5px $darkGreyColor;
+  border-radius: 50px 20px;
+  margin-bottom: 50px;
+
+  @include mobile {
+    margin-bottom: 20px;
+  }
+}
+
+//text area
+.contact_text {
+  width: 50%;
+  color: $lightGreyColor;
+  margin-top: 10px;
+
+  @include mobile {
+    width: 90%;
+  }
+
+}
+
+//list
+.contact_list {
+  width: 50%;
+  text-align: center;
+  list-style: none;
+
+  @include mobile {
+    width: 100%;
+  }
+  li{
+    margin: 20px ;  
+  }
+  a {
+    color: $yellowColor;
+font-size: 1.2em;
+}
+}

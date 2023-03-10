@@ -1,0 +1,319 @@
+@import "../../styles/global.scss";
+
+.concert{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+
+  @include mobile{
+    margin: 0;
+  }
+  
+
+  .imageConcert{
+    height: 50vh;
+    width: 100%;
+    background: linear-gradient(rgba(33,33,33,0.522), rgba(33,33,33,0.522)), url(https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    .avatarConcert{
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+
+      span{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-shadow: $yellowColor 5px 2px 5px;
+        width: 100%;
+        height: 50px;
+        font-weight: 500;
+        font-size: 60px;
+        padding-left: 5px;
+      }
+    }
+  
+    .iconsConcert{
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      margin-left: 20px;
+      margin-bottom: 5px;
+        
+      }
+
+      .placeConcert{
+
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+        
+        .placeIcon{
+          color: $yellowColor;
+        }
+
+        p{
+          padding-left: 5px;
+          color: white;
+        }
+      }
+  
+      .dateConcert{
+  
+        display: flex;
+        align-items: center;
+        margin-top: 5px;
+  
+        .dateIcon{
+          color: $yellowColor;
+        }
+
+        p{
+          padding-left: 5px;
+          color: white;
+        }
+      }
+
+    }
+
+    .infoConcert{
+      position: relative;
+      height: 30vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+      justify-content: space-evenly;
+
+      .titleConcert{
+        color: $yellowColor;
+        width: 60%;
+      }
+
+      .arrowDunk{
+        width: 2em;
+        height: 2em;
+        position: absolute;
+        right: 10px;
+        transform: rotate(90deg);
+        color: $yellowColor;
+        margin-right: 15px;
+      }
+
+      .subButton{
+  
+        padding: .5rem;
+        font-size: 1rem;
+        background-color: $yellowColor;
+        border: 1px solid $darkGreyColor;
+        transition: .3s ease;
+        cursor: pointer;
+        
+        a{
+          color: $darkGreyColor;
+        }
+
+        &:hover{
+
+          background-color: $darkGreyColor;
+          border: 1px solid $yellowColor;
+          color: $yellowColor;
+
+          a{
+            color: $yellowColor;
+          }
+        }
+      }
+    }
+    .titlelist{
+      color: $yellowColor;
+      text-decoration: underline;
+    }
+    .subscribers{
+      display: grid;
+      width: 70%;
+      grid-template-columns: repeat(3,1fr);
+      align-items: center;
+      padding: 2rem 0;
+      gap: 1rem;
+
+      @include mobile{
+        grid-template-columns: repeat(2,1fr);
+      }
+      
+
+      .subscriber{
+        
+        overflow: hidden;
+        box-shadow: 5px 5px $yellowColor;
+        border-radius: 10px;
+        margin: 5px;
+        
+
+        .subscriberImg{
+          height: 200px;
+          width: 100%;
+          position: relative;
+          overflow: hidden;
+          
+
+          @include mobile{
+            height: 90px;
+          }
+
+          img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+
+          .overlayInfo{
+            position: absolute;
+            display: flex;
+            align-items: flex-start;
+            padding: 0;
+            justify-content: center;
+            flex-direction: column;
+            padding: 1rem 1.5rem;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+
+
+            .viewProfile{
+              position: absolute;
+              right: 10px;
+              bottom: 10px;
+              padding: .5rem;
+              background-color: $yellowColor;
+              font-size: 2.5rem;
+              border-radius: 50%;
+              border: 1px solid $darkGreyColor;
+              transition: .3s ease;
+              cursor: pointer;
+
+              @include mobile{
+                width: 35px;
+                height: 35px;
+              }
+
+              &:hover{
+
+                background-color: $darkGreyColor;
+                border: 1px solid $yellowColor;
+                color: $yellowColor;
+              }
+            }
+          }
+        }
+
+        .subscriberFooter{
+          padding: 1rem;
+          background-color: $greyColor;
+
+          .subscriberPseudo{
+            font-size: 1rem;
+            font-weight: 700;
+            color: $yellowColor;
+            position: relative;
+            width: max-content;
+          }
+          .subscriberAge{
+            font-size: 1rem;
+            font-weight: 700;
+            color: $yellowColor;
+            position: relative;
+            width: max-content;
+          }
+        }
+      }
+    }
+    .glow-on-hover{
+      width: 200px;
+      height: 40px;
+      border: none;
+      outline: none;
+      color: $greyColor;
+      background: $yellowColor;
+      cursor: pointer;
+      position: relative;
+      z-index: 0;
+      border-radius: 10px;
+      padding: 5px;
+  
+      a{
+        color: inherit;
+        text-decoration: none;
+      }
+  
+      @include mobile {
+        width: 100px;
+        height: 60px;
+      
+      }
+  
+  
+  &:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  &:active {
+    color: $yellowColor;
+  }
+  
+  &:active:after {
+    background: $greyColor;
+  }
+  
+  &:hover:before {
+    opacity: 1;
+  }
+  
+  &:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: $yellowColor;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+  
+  @keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+  }
+
+  }
+}
+

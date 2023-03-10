@@ -1,0 +1,142 @@
+@import "../../styles/global.scss";
+
+//form page
+.formPage {
+  color: $lightGreyColor;
+  border: 3px solid $yellowColor;
+  width: 800px;
+  height: calc(100% - 100px);
+  margin: 35px ;
+  display: flex;
+
+
+  @include mobile {
+    width: 80%;
+    overflow: auto;
+
+  }
+}
+
+//form
+.formRegister {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: sticky;
+  align-content: flex-end;
+  justify-content: center;
+
+  @include mobile {
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: nowrap;
+    overflow: auto;
+    justify-content: normal
+  }
+}
+
+.input {
+  margin-bottom: 10px;
+  width: 250px;
+
+  label,
+  .input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
+.form_left {
+  @include flexcolumn;
+  justify-content: space-between;
+  width: 50%;
+  align-items: center;
+
+  @include mobile {
+    flex-basis: 100%;
+    flex-grow: 0;
+    padding: 10px;
+    width: 100%;
+    align-items: center
+  }
+}
+
+.form_right {
+  @include flexcolumn;
+
+  width: 50%;
+  padding: 5%;
+
+  @include mobile {
+    flex-basis: 100%;
+    flex-grow: 0;
+    padding: 10px;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    margin: auto
+  }
+
+  .imgProfil {
+    width: 30%;
+    height: auto
+  }
+
+}
+
+// users data (name, surname, ...)
+.form_profil {
+  @include flexcolumn;
+  margin-bottom: 20px;
+  align-items: flex-start;
+
+  h2 {
+    text-decoration: underline;
+    font-size: 1.2em;
+    padding-bottom: 5px;
+
+    @include mobile {
+      font-size: 1.1em;
+    }
+  }
+
+}
+
+// password and email input
+.identify {
+  @include flexcolumn;
+  margin-top: 10px;
+  align-items: flex-start;
+
+}
+
+// user description input
+.bio {
+  width: 300px;
+  height: 300px;
+  margin-bottom: 40px;
+
+  @include mobile {
+    width: 90%;
+    height: 200px;
+  }
+}
+
+// button
+
+.buttonForm {
+  @include button;
+  padding: 10px;
+  ;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: -20px;
+
+  @include mobile {
+    position: relative;
+    margin: 0px;
+  }
+}

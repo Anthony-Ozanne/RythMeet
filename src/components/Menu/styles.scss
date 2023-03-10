@@ -1,0 +1,46 @@
+@import "../../styles/global.scss";
+
+.menu{
+  position: absolute;
+  top: -8rem;
+
+  @include mobile{
+    height: max-content;
+    width: 80%;
+    box-shadow: 10px 10px $yellowColor;
+    border-radius: 1rem;
+    flex-direction: column;
+    padding: 0.5rem;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s ease;
+    background-color: $darkGreyColor;
+
+    :hover{
+      color: rgb(173, 150, 16);
+    }
+
+    &.active{
+      top: 30%;
+      display: flex;
+    }
+    
+    ul{
+      
+
+      li{
+        list-style: none;
+        text-decoration: none;
+        padding: 0.5rem;
+  
+        a{
+          color: $yellowColor;
+          font-weight: 800;
+        }
+      }
+    }
+  }
+}
+
+

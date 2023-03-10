@@ -1,0 +1,163 @@
+@import "../../styles/global.scss";
+
+.topbarSection{
+  height: 50px;
+  width: 100%;
+  background-color: $greyColor;
+  display:flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  justify-content: space-between;
+  z-index: 100;
+  border-bottom: 1px solid $yellowColor;
+}
+
+.profile{
+
+  display: flex;
+  position: relative;
+  
+  .options{
+
+    display: none;
+    background-color: $greyColor;
+    border-radius:  0px 0px 5px 5px;
+    top: 100%;
+    right: 0;
+    position: absolute;
+
+
+    
+  }
+
+  span{
+    font-size: 0.9rem;
+    padding: 10px;
+    cursor: pointer;
+    color: $yellowColor;
+  }
+  span:hover{
+    color: rgb(173, 150, 16);
+  }
+
+  &:hover{
+
+    .options{
+      display: flex;
+      width: 10rem;
+      height: 6rem;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-direction: column;
+      position: absolute;
+      border-left: 1px solid $yellowColor;
+      border-bottom: 1px solid $yellowColor;
+      border-right: 1px solid $yellowColor;     
+      
+    }
+  }
+
+  .topbarImg{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    object-fit: cover;
+    margin-right: 20px;
+    border: 1.5px solid $yellowColor;
+    color: $yellowColor;
+    background-color: $darkGreyColor;
+
+    @include mobile{
+      right: 0;
+    }
+  }
+}
+
+.topbarLeft{
+  flex: 3;
+
+  @include mobile{
+    flex: 3;
+  }
+}
+
+.topbarCenter{
+  flex: 5;
+
+  @include mobile{
+    flex: 4;
+  }
+}
+
+.topbarRight{
+  flex: 4;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 20px;
+  
+
+  @include mobile{
+    flex: 2;
+    justify-content: flex-end;
+    
+  }
+
+  .toggleNavbar{
+    display: none;
+
+    @include mobile{
+      display: flex;
+      align-items: center;
+      color: $yellowColor;
+      cursor: pointer;
+    }
+  }
+}
+
+.logo{
+  width: 120px;
+  font-size: 24px;
+  margin-left: 10px;
+  color: $yellowColor;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  @include mobile{
+    font-size: 19px;
+  }
+}
+
+.searchBar{
+  width: 100%;
+  height: 30px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  border: 1.5px solid $yellowColor;
+
+  input{
+    margin: 5px;
+  }
+}
+
+.searchIcon{
+  font-size: 18px !important;
+  margin-left: 10px;
+}
+
+.searchInput{
+  border: none;
+  width: 70%;
+}
+
+.searchInput:focus{
+  outline: none;
+}
+
+
+

@@ -1,0 +1,27 @@
+@use 'global';
+@import 'global';
+@font-face {
+  font-family: 'ShortStack-Regular';
+  src: url('../assets/fonts/ShortStack-Regular.ttf') format('truetype');
+};
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'ShortStack-Regular', sans-serif;
+
+  a{
+    text-decoration: none;
+  }
+
+  .flex{
+    display: flex;
+    align-items: center;
+  }
+}
+
+body {
+  background-color: $darkGreyColor;
+}
+

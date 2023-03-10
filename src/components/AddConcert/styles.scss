@@ -1,0 +1,105 @@
+@import "../../styles/global.scss";
+
+//container
+.form {
+  height: calc(100% - 100px);
+  @include form;
+}
+
+// Form 
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+
+
+  h2 {
+    text-decoration: underline;
+    color: $yellowColor;
+    text-align: center;
+    font-size: 1.2em;
+    padding-top: 5%;
+    @include mobile {
+      font-size: 1.1em;
+    }
+  }
+
+  @include mobile {
+    flex-direction: column;
+    align-content: center;
+  }
+}
+
+.inputs{
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+width: 100%;
+height: auto;
+margin: auto;
+@include mobile {
+  flex-direction: column;
+  align-items: center
+
+
+  
+}
+}
+
+.form_right {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.picture {
+  align-self: center;
+  margin-left: 25px;
+  @include mobile {
+    margin-bottom: 40%;
+  }
+}
+
+.input {
+  margin-bottom: 10px;
+  width: 250px;
+
+  
+}
+
+label,
+.input {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+
+.button {
+  @include button;
+  padding: 10px;
+position: absolute; 
+margin-top: -25px;
+}
+
+//pop up confirmation 
+
+.custom-modal {
+  background-color: $yellowColor;
+  text-align: center;
+  color: $darkGreyColor;
+  width: 30%;
+  margin: auto;  
+  margin-top:10%;
+  box-shadow: 5px 5px 5px;
+
+  @include mobile {
+    width: 60%;
+    margin-top: 20%;
+  }
+}
+
+
+

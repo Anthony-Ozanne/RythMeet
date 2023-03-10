@@ -1,0 +1,86 @@
+@import "../../styles/global.scss";
+
+
+//container
+.about_container {
+  height: calc(100% - 100px);
+  margin-bottom: 40px;
+}
+
+//streamer
+.streamer {
+  height: 100px;
+  width: 100vw;
+  background-image: linear-gradient(to bottom, $yellowColor, $darkGreyColor);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    color: $lightGreyColor ;
+    text-shadow: 2px 3px 5px $darkGreyColor;
+  }
+}
+
+//texts area
+.texts {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: $lightGreyColor;
+
+  @include mobile {
+    align-items: center;
+
+
+  }
+}
+
+// paragraphs
+
+.intro {
+  border-bottom: 2px solid $yellowColor;
+  width: 30%;
+  text-align: center;
+  padding: 15px;
+  margin: 30px;
+
+  @include mobile {
+    width: 80%;
+  }
+}
+
+.paragraphs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  span{
+    color: $yellowColor;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    align-items: center
+  }
+}
+
+.paragraph_one {
+  width: 30%;
+  @include mobile {
+    width: 80%;
+    margin-bottom: 10%;
+  }
+
+}
+
+.paragraph_two {
+  width: 60%;
+  @include mobile {
+    width: 80%;
+  }
+  .inter{
+    margin-top: 10px;
+  }
+
+}

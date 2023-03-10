@@ -1,0 +1,58 @@
+$darkGreyColor: #2C2E43;
+$greyColor: #595260;
+$lightGreyColor: #B2B1B9;
+$yellowColor: #FFD523;
+
+
+
+$width: 768px;
+
+// Responsive
+@mixin mobile {
+  @media (max-width: #{$width}){
+    @content
+  }
+};
+
+//flexbox row from 
+
+@mixin flexcolumn{
+  display: flex;
+  flex-direction: column;
+}
+
+//button
+
+@mixin button { 
+  cursor: pointer;
+  background-color: $yellowColor;
+  color: $greyColor;
+  font-weight: bold;
+  border-color: $yellowColor;
+  border-radius: 10px;
+  &:hover {
+    background-color: darken($yellowColor, 10%);
+  }
+
+}
+
+//form box
+
+@mixin form {
+  color: $lightGreyColor;
+  border: 3px solid $yellowColor;
+  width: 800px;
+  height: 550px;
+  margin: 35px auto 0;
+  margin-bottom: 40px;
+  display: flex;
+
+  @include mobile {
+    width: 80%;
+    height: 550px;
+    box-sizing: border-box;
+    overflow: auto;
+  }
+}
+
+

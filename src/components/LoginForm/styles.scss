@@ -1,0 +1,80 @@
+@import "../../styles/global.scss";
+
+.formContainer{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $darkGreyColor;
+
+  .formWrapper{
+    background-color: $lightGreyColor;
+    padding: 20px 60px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 10px 10px $yellowColor;
+
+    @include mobile{
+      padding: 20px 10px;
+    }
+
+    .formlogo{
+      color: $yellowColor;
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    .formtitle{
+      color: $yellowColor;
+      font-size: 12px;
+    }
+
+    form{
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      input{
+        background-color: $lightGreyColor;
+        width: 250px;
+        padding: 15px;
+        border: none;
+        border-bottom: 2px solid $yellowColor;
+
+      &::placeholder{
+        
+        color: $greyColor;
+      }
+      }
+
+      button{
+        background-color: $yellowColor;
+        color: $greyColor;
+        padding: 10px;
+        font-weight: bold;
+        border-color: $yellowColor;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+    }
+
+    p{
+      color: $greyColor;
+      font-size: 15px;
+      margin-top: 10px;
+    }
+  }
+  .linkregister{
+    color: $greyColor;
+  }
+  .linkregister:hover{
+    color: $darkGreyColor;
+  }
+}
+//handle Error
+.error {
+  color: red;
+}
