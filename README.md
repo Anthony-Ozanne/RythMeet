@@ -34,6 +34,7 @@ Rythmeet est un site pour les amateurs de musique, et concert. Vous pouvez y tro
 2. Installez les dépendances : yarn
 3. Lancez l'application : yarn start
 4. Créer un fichier .env a la racine et copier cette ligne : ``REACT_APP_BASE_API_URL=http://localhost:8000/api/``
+5. Pour le repo back avec les instruction c'est ici : (https://github.com/JBColmay/JBColmay-Projet-Rythmeet-Back-Symfony)
 
 
 
