@@ -33,6 +33,9 @@ Rythmeet est un site pour les amateurs de musique, et concert. Vous pouvez y tro
 1. Clonez le dépôt git : git clone https://github.com/O-clock-Lucy/projet-07-rencontres-concerts-front
 2. Installez les dépendances : yarn
 3. Lancez l'application : yarn start
+4. Créer un fichier .env a la racine et copier cette ligne : REACT_APP_BASE_API_URL=http://localhost:8000/api/
+
+
 
 
 ## Contributeurs
