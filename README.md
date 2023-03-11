@@ -26,7 +26,7 @@ Rythmeet est un site pour les amateurs de musique, et concert. Vous pouvez y tro
 - React Router pour la navigation entre les pages
 - SCSS pour la mise en page et les styles
 - Symfony pour la gestion du serveur
-- && pour la base de données
+- Adminer pour la base de données
 
 ## Installation
 
